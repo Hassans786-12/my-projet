@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&dispaly=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+body {
+  width: 100vw;
+  background-color: rgb(219, 219, 219);
+}
+
+header {
+  width: 100%;
+  background-color: #447fb9;
+  height: 220px;
+  padding: 10px;
+}
+
+/*---- navbar ---*/
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 10px;
+}
+
+/*--- navbardesktop ---*/
+
+.navbar-dropdown {
+  display: none;
+}
+
+/*---- logo ---*/
+
+.logo img {
+  width: 75px;
+  height: 75px;
+}
+
+/*---- menumobile ----*/
+
+.menu-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  height: 75px;
+  width: 60px;
+}
+
+li {
+  list-style: none;
+}
+.container-navbar-desktop {
+  display: none;
+}
+/*---- titer de site ----*/
+
+.Titre-info {
+  width: 100%;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 12px;
+  padding-top: 15px;
+}
+
+/*--- container contact ----*/
+
+.container-contact {
+  width: 100%;
+ justify-content: center;
+ display: flex;
+} 
+
+.contact {
+  width: 90%;
+  /* height: 200px; */
+ background-color: white;
+ position: relative;
+ bottom: 10px;
+ /* border: 1px solid black; */
+ border-radius: 10px 
+}   
+
+.container-button {
+width: 100%;
+align-items: center;
+padding: 10px;
+}
+
+.container-button button {
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  background-color: rgb(230, 229, 229);
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+  padding: 30px;
+}
+.container-button button:nth-child(1){
+  margin-bottom: 10px;
+}
+.container-button button img {
+  padding: 10px;
+}
+
+.texte-h2 {
+  width: 100%;
+  background: black;
+  color: white;
+  border-radius: 10px 10px 0px 0;
+  text-align: center;
+}
+
+.texte-h2:nth-child(1) {
+  font-size: small;
+  padding: 15px;
+}
+
+
+/*--- vedio et paragraphe---*/
+
+.container-img {
+  width: 100%;
+  padding: 10px;
+}
+
+.vedio {
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+
+}
+.vedio img{
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.Découvrire {
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  font-size: medium;
+}
+
+.p1 {
+  width: 100%;
+  padding: 10px;
+  font-size: small;
+}
+
+.T-paragaraphe {
+   background: white;
+   border-radius: 10px;
+   width: 100%;
+   padding: 10px;
+}
+
+.btn-1 {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #447fb9;
+  color: white;
+  margin-top: 10px;
+}
+
+/*--- photo-slide ---*/
+
+#slider {
+  width: 100%;
+  /* height: 300px; */
+  position: relative;
+  margin: 20px auto;
+  box-shadow: 0 0 6px #000;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#slider img {
+  width: 100%;
+  border-radius: 10px;
+}
+.slide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.prev , .next {
+  font-size: 40px;
+  text-decoration: none;
+  color: #000;
+  position: absolute;
+  top: 45%;
+  font-weight: 400;
+  
+}
+
+.T-4 {
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.btn3 {
+  padding: 10px;
+  background-color: #447fb9;
+  color: wheat;
+  border-radius: 10px;
+}
+
+/*----- media quarry ----*/
+
+@media only screen and (min-width:768px) {
+
+  .container-navbar-desktop {
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    background: white;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+  .navbar-desktop {
+      width: 100%;
+  }
+
+  .navbar {
+      display: none;
+  }
+
+  .container-navbar-desktop ul {
+      width: 100%;
+      display: flex;
+      align-items: center;
+  }
+
+  .container-navbar-desktop ul li {
+      font-size: 1rem;
+      margin: 0 20px;
+      text-decoration: none;
+  }
+
+  .container-navbar-desktop ul li:nth-child(6) {
+      margin: 0 50px 0 auto ;
+  }
+
+  /* ---- container contact ----*/
+
+  .container-contact {
+      justify-content: center;
+      display: flex;
+      width: 100%;
+   }
+
+   .contact {
+      width: 80%;
+      height: 115px; 
+      display: flex;  
+      position: relative;
+      bottom: 20px;
+  }
+
+  .container-button  {
+    width: 100%;
+      height: 60px;
+      border-radius: 10px;
+      margin: 30px;
+      display: flex;
+      justify-content: space-between;
+      /* padding: 30px; */
+  }
+  .container-button button:nth-child(1){
+    margin-bottom: 0;
+  }
+
+  .texte-h2 {
+      background: black;
+      color: white;
+      border-radius: 10px 0px 0px 10px;
+      text-align: center;
+      justify-content: center;
+      font-size:10px;
+   }
+  .container-img {
+    display: flex;
+    width: 100%;
+  }
+  
+  .vedio {
+    width: 50%;
+  }
+
+  .T-paragaraphe {
+   width: 50%;
+   margin-right: 10px;
+ }
+
+ .Découvrire {
+  padding: 10px;
+ }
+
+ .btn-1 {
+   
+ }
+  
+  }
+
+  @media only screen and (min-width:1024px) {
+
+  }
