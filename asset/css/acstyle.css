@@ -29,6 +29,10 @@ header {
   border-radius: 10px;
 }
 
+.navbar .active:hover{
+  background: #03fe78;
+}
+
 /*--- navbardesktop ---*/
 
 .navbar-dropdown {
@@ -92,6 +96,7 @@ li {
 width: 100%;
 align-items: center;
 padding: 10px;
+cursor: pointer;
 }
 
 .container-button button {
@@ -170,62 +175,308 @@ padding: 10px;
   margin-top: 10px;
 }
 
-/*--- photo-slide ---*/
 
-#slider {
-  width: 100%;
-  /* height: 300px; */
+/*--- photo-slide --*/
+
+
+.carousel-containder {
   position: relative;
-  margin: 20px auto;
-  box-shadow: 0 0 6px #000;
-  padding: 10px;
-  border-radius: 10px;
+  width: 90%;
+  margin: 20px;
+  overflow: hidden;
 }
 
-#slider img {
+.carousel {
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
   width: 100%;
-  border-radius: 10px;
-}
-.slide {
-  display: none;
+  height: auto;
+  border-radius: 5px;
 }
 
-.active {
-  display: block;
+h4{
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 5px;
 }
 
-.prev , .next {
-  font-size: 40px;
-  text-decoration: none;
-  color: #000;
-  position: absolute;
-  top: 45%;
-  font-weight: 400;
-  
+.text1{
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
-.T-4 {
-  width: 100%;
-  align-items: center;
-  padding: 10px;
+.text2{
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
+.text3{
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 .btn3 {
   padding: 10px;
-  background-color: #447fb9;
-  color: wheat;
   border-radius: 10px;
+  background-color: #447fb9;
+  color: white;
+  margin-top: 10px;
 }
 
-/*----- media quarry ----*/
+.bott {
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+
+}
+
+.prev {
+  left: 100px;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.bott:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/*-- discription de événement --*/
+
+.containers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #24232a;
+}
+
+.discription-container {
+  position: relative;
+  width: 315px;
+  height: 590px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.discription-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 310px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #03fe78, #03fe78);
+  transform-origin: bottom right;
+  animation: animate 7s linear infinite;
+}
+
+.discription-container::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 310px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #d803fe, #d803fe);
+  transform-origin: bottom right;
+  animation: animate 7s linear infinite;
+  animation-delay: 3s;
+}
+
+@keyframes animate {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.form{
+  position: absolute;
+  inset: 3px;
+  border-radius: 8px;
+  background: #24232a;
+  z-index: 10;
+  padding: 30px 0px 0px 0px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.form h3 {
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #03fe78;
+  padding-bottom: 10px;
+}
+
+.line{
+  color: #03fe78;
+}
+
+.inputBox {
+  position: relative;
+  padding: 5px;
+  left: 10px;
+  margin-top: 8px;
+}
+
+.inputBox input{
+  width: 90%;
+  padding: 5px 5px 2px;
+  background: transparent;
+  border-color: #03fe78;
+  border-radius: 10px;
+  color: #03fe78;
+}
+
+.inputBox5 {
+  position: relative;
+  padding: 5px;
+  left: 10px;
+  margin-top: 8px;
+}
+
+.inputBox5 input {
+  width: 90%;
+  padding: 5px 5px 2px;
+  background: transparent;
+  border-color: #03fe78;
+  border-radius: 10px;
+  color: #03fe78;
+}
+
+.inputBox6 input {
+  width: 50%;
+  padding: 10px;
+  margin: 15px;
+  border-color: #03fe78;
+  background: #447fb9;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.form p{
+  color: #d803fe;
+}
+
+
+/*-- footer--*/
+
+
+
+footer{
+  background-color: #111;
+
+}
+
+.footerContainer {
+  padding: 70px 30px 20px;
+}
+
+.socialIcons{
+  justify-content: center;
+}
+
+.socialIcons a{
+  text-decoration: none;
+  padding: 7px;
+  background-color: white;
+  margin: 7px;
+  border-radius: 50%;
+}
+
+.socialIcons a i{
+  font-size: 1em;
+  color: black;
+  opacity: 0.9;
+}
+
+/*-- hover effects on Social media Icons*/
+
+.socialIcons a:hover{
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+}
+
+.footerNav{
+  width: 100%;
+
+ 
+} 
+
+.footerNav ul{
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  text-align: center;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.footerNav ul li a{
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footerNav ul li a:hover{
+  opacity: 1;  
+}
+
+.footerBottom{
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+.footerBottom p{
+  color: white;
+}
+
+
+
+
+/*----------------- media quarry  min-width: 786px ------------*/
+
 
 @media only screen and (min-width:768px) {
 
@@ -234,12 +485,17 @@ padding: 10px;
     align-items: center;
     width: 100%;
     background: white;
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 5px;
 }
 
   .navbar-desktop {
       width: 100%;
+  }
+
+  .navbar-desktop.active:hover{
+    background: #03fe78;
   }
 
   .navbar {
@@ -262,12 +518,48 @@ padding: 10px;
       margin: 0 50px 0 auto ;
   }
 
+  .sub-menu-1 {
+    display: none;
+  }
+
+  .container-navbar-desktop ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background-color: rgb(0, 100, 0);
+    margin: 15px;
+    margin-left: -15px;
+    border-radius: 10px;
+  }
+
+  .container-navbar-desktop ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+  }
+
+  .container-navbar-desktop ul li:hover .sub-menu-1 ul li{
+    width: 300px;
+    padding: 10px;
+  }
+
+  /*----- titre info -------*/
+
+  .Titre-info {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
   /* ---- container contact ----*/
 
   .container-contact {
       justify-content: center;
+      text-align: center;
       display: flex;
       width: 100%;
+      font-size: 50pxpx;
    }
 
    .contact {
@@ -276,28 +568,40 @@ padding: 10px;
       display: flex;  
       position: relative;
       bottom: 20px;
+      
   }
 
   .container-button  {
-    width: 100%;
+      width: 100%;
       height: 60px;
       border-radius: 10px;
       margin: 30px;
       display: flex;
       justify-content: space-between;
-      /* padding: 30px; */
+      cursor: pointer;
+      gap: 20px;
+      
   }
   .container-button button:nth-child(1){
     margin-bottom: 0;
   }
 
   .texte-h2 {
-      background: black;
+    background: black;
       color: white;
       border-radius: 10px 0px 0px 10px;
       text-align: center;
       justify-content: center;
-      font-size:10px;
+      font-size: 110px;
+      h2 {
+        text-align: center;
+        font-size: 30px;
+      }
+      h3 {
+        text-align: center;
+        font-size: 20px;
+      }
+      
    }
   .container-img {
     display: flex;
@@ -321,6 +625,51 @@ padding: 10px;
    
  }
   
+  }
+
+/*-- discription de événement --*/
+
+
+  
+ 
+
+
+  /*-- photo slite--*/
+
+ /*.carousel-containder {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    overflow: hidden;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s;
+  }*/
+
+
+
+  /*-- footer --*/
+
+  .footerContainer{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .socialIcons a{
+    justify-content: center;
+    align-items: center;
+    right: 120px;
+  }
+
+  .footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    flex-direction: row;
   }
 
   @media only screen and (min-width:1024px) {

@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: block;
+    background: url(../photos/background.gpj.jpg);
+    color: aliceblue;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    padding: 40px;
+    background: url(../photos/11557.jpg);
+    background-size: cover;
+    border-radius: 22px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+
+form h2{
+    width: 100%;
+    font-family: poppins;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.left-container,
+.right-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 15px;
+    align-items: flex-start;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #456;
+    border-radius: 20px;
+    height: 30px;
+}
+
+.input-box input{
+    outline: none;
+    color: aliceblue;
+    padding: 3px 17px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    width: 98%;
+    float:left
+}
+
+::placeholder{
+    color: aliceblue;
+}
+
+.password-settings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 10px;
+}
+
+.password-settings .remember-box{
+    display: flex;
+    cursor: pointer;
+}
+
+.password-settings #Remember_checkbox{
+    margin-right: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.remember-box lable{
+    cursor: pointer;
+}
+
+.password-settings .forgot-password{
+    color: aliceblue;
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 80%;
+}
+
+button{
+    width: 100%;
+    border-radius: 20px;
+    background: none;
+    color: aliceblue;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid #456;
+    transition: 0.3s;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+button:hover{
+    border: 2px solid rgb(1, 235, 75);
+}
+
+.sign-in{
+    font-weight: 600;   
+    background: linear-gradient(35deg, rgb(189, 226, 145), rgb(100, 168, 87), rgb(116, 211, 145));
+}
+
+.right-container-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.horizontal-line{
+    width: 100%;
+}
+
+h3{
+    text-align: center;
+    overflow: hidden;
+    font-size: 11px;
+}
+
+h3:before,
+h3:after{
+    background-color: rgb(241, 241, 241);
+    content: '';
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+h3:before{
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+h3:after{
+    left:0.5em;
+    margin-right: -50%;
+}
+
+.login-methodes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.fab{
+    color: aliceblue;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.fab:hover{
+    color: rgb(146, 146, 146);
+}
+
+/*-- media quarry ----*/
+
+
+@media (max-width: 600px){
+    form {
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        width: 270px;
+        padding: 40px 10px;
+    }
+
+    form h2{
+        margin-bottom: 30px;
+    }
+
+    .left-container,
+    .right-container{
+        width: 100%;
+    }
+}
+
+
+
+

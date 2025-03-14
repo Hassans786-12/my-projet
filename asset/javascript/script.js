@@ -1,64 +1,33 @@
 /*--- photo slid ----*/
 
+let slideIndex = 0;
 
-var slides=document.getElementsByName("slide");
-var prev=document.querySelector(".prev");
-var next=document.querySelector(".next");
-var n=0;
-
-function displayNone(){
-    for(let i=0;i<slides.length;i++){
-        slides[i].style.display='none';
+function showSlide(index) {
+    let slides = document.querySelectorAll('.carousel-slide'); // Use the correct class or tag name
+    if (index >= slides.length) {
+        slideIndex = 0;
     }
+    if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    const carousel = document.querySelector('.carousel');
+    carousel.style.transform = `translateX(-${slideIndex * 100}%)`; // Correct percentage
 }
 
-function noActive(){
-    for(let i=0;i<slides.length;i++){
-        slides[i].classList.remove('active');
-    }
+function moveSlide(step) {
+    slideIndex += step;
+    showSlide(slideIndex);
 }
 
-next.addEventListener("click",function(){
-    n++
-    if(n>slides.length-1){
-        n=0
-    }
+// Start showing the first slide
+showSlide(slideIndex);
 
-    displayNone();
-    noActive();
-    slides[n].style.display='block';
-    slides[n].classList.add=('active');
-});
+// Automatically change the slide every 3 seconds
+setInterval(() => {
+    slideIndex++;
+    showSlide(slideIndex);
+}, 3000);
 
-prev.addEventListener("clock",function(){
-    n--;
-    if(n<0){
-        n=slides.length-1
-    }
-});
-
-prev.addEventListener("click",function(){
-    n--;
-    if(n<0){
-        n=slides.length-1;
-    }
-
-    displayNone();
-    noActive();
-    slides[n].style.display='block';
-    slides[n].classList.add('active');
-});
-
-
-setInterval(function(){
-    n++;
-    if(n>slides.length-1){
-        n=0;
-    }
-     displayNone();
-     noActive();
-     slides[n].style.display='block';
-     slides[n].classList.add('active');
-},4000);
 
  

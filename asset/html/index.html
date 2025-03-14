@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Système gesion d'Evénément</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/acstyle.css" />
   </head>
   <body>
@@ -15,11 +16,11 @@
         <div class="menu-mobile"><span>&#9776;</span></div>
         <div class="navbar-dropdown">
           <ul>
-            <li><a href="index.html">Accuiel</a></li>
-            <li><a href="#">Evénements</a></li>
-            <li><a href="#">Vous êtes</a></li>
-            <li><a href="#">Animation</a></li>
-            <li><a href="#">S e connecter</a></li>
+            <li class="active"><a href="../html/index.html">Accuiel</a></li>
+            <li><a href="../html/event.html">Evénements</a></li>
+            <li><a href="../html/vo.html">Vous êtes</a></li>
+            <li><a href="../html/ani.html">Animation</a></li>
+            <li><a href="../html/cont.html">S e connecter</a></li>
           </ul>
         </div>
       </nav>
@@ -29,11 +30,23 @@
             <li>
               <div class="logo"><img src="../img/logo-1s.png" alt="" /></div>
             </li>
-            <li><a href="index.html">Accuiel</a></li>
-            <li><a href="#">Evénements</a></li>
-            <li><a href="#">Vous êtes</a></li>
-            <li><a href="#">Animation</a></li>
-            <li><a href="#">Se connecter</a></li>
+            <li class="active"><i class="fa fa-home"></i><a href="index.html">Accuiel</a></li>
+            <li><i class="fa fa-caledar"></i><a href="#">Evénements</a>
+              <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#">Séminaire</a></li>
+                  <li><a href="#">Anniversaire </a></li>
+                  <li><a href="#">Fête du personnel</a></li>
+                  <li><a href="#">fête/ Arbre de noël</a></li>
+                  <li><a href="#">street marketing</a></li>
+                  <li><a href="#">Hôtesses  evenementielles</a></li>
+                  <li><a href="#">Conventio/Cogrès/Conférence</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><i class="fa fa-home"></i><a href="#">Vous êtes</a></li>
+            <li><i class="fa fa-home"></i><a href="#">Animation</a></li>
+            <li><i class="fa-solid fa-user-plus"></i><a href="#">Se connecter</a></li>
           </ul>
         </div>
       </nav>
@@ -88,29 +101,106 @@
     </div>
 
     <!-- photo slide -->
-
-    <div id="slider">
-      <h4 class="T-4">Du séminaire à l'anniversaire d'entreprise, du team building à l'incentive,
-        Accédez rapidement à votre événement !</h4>
-      <div class="slide-active">
-        <img src="../photos/Celebrities posing.jpg" alt="" />
+      <div class="carousel-containder">
+        <div class="carousel">
+           <div class="carousel-slide">
+              <h4>Du séminaire à l'anniversaire d'entreprise, du team building à l'incentive,
+                Accédez rapidement à votre événement !</h4>
+                <img src="../photos/11557.jpg" alt="slide 1">
+              <div class="text1"> 
+                <h4>Organisez des séminaires professionnels</h4>
+                <p>Votre séminaire pris en main par nos équipes. Système Gesion d’événemnt organise 
+                  pour vous tous vos séminaires incentives d’équipes</p>
+                  <button class="btn3">J’organise mon séminare</button>
+                </div>     
+           </div>
+           <div class="carousel-slide">
+              <h4>Du séminaire à l'anniversaire d'entreprise, du team building à l'incentive, 
+                 Accédez rapidement à votre événement !</h4>
+                <img src="../photos/background.gpj.jpg" alt="slide 2"> 
+                <div class="text2">
+                  <h4>Organisez des anniversaire professionnels</h4>
+                <p>Votre séminaire pris en main par nos équipes. Système Gesion d’événemnt organise 
+                  pour vous tous vos séminaires incentives d’équipes</p>
+                  <button class="btn3">J’organise mon anniversaire</button>
+                </div> 
+           </div>
+           <div class="carousel-slide">
+            <h4>Du séminaire à l'anniversaire d'entreprise, du team building à l'incentive, 
+               Accédez rapidement à votre événement !</h4>
+               <img src="../photos/event pa ph1.jpg.jpg" alt="slide 2"> 
+               <div class="text3">
+                <h4>Organisez les fête professionnels</h4>
+               <p>Votre séminaire pris en main par nos équipes. Système Gesion d’événemnt organise 
+               pour vous tous vos séminaires incentives d’équipes</p>
+               <button class="btn3">J’organise mon fête</button>
+              </div> 
+         </div>
+        </div> 
         
+        <div class="bott">
+          <button class="prev" onclick="moveslide(-1)">&#10094;</button>
+          <button class="next" onclick="moveslide(1)">&#10095;</button>
+        </div>
       </div>
-      <div class="slide">
-        <img src="../photos/event pa ph1.jpg.jpg" alt="" />
-      </div>
-      <div class="slide">
-        <img src="../photos/event par ph.jpg.jpg" alt="">
-      </div>
-      <div class="slide">
-         <img src="../photos/event ph 1.jpg.jpg" alt="">
-      </div>
-      <h4 class="T-org">Organisez des séminaires professionnels</h4>
-      <p class="T-p">Votre séminaire pris en main par nos équipes. Système Gesion d’événemnt organise pour vous tous vos séminaires incentives d’équipes</p>
-      <button class="btn3">J’organise mon séminare</button>
-      <a href="#" class="prev">&lt;</a>
-      <a href="#" class="next">&gt;</a>
+
+      <!-- choisi les événements  -->
+
+    <div class="containers">
+       <div class="discription-container">
+          <div class="form">
+            <h3>DEVISE EXPRESS POUR VOTRE FUTURE EVENEMENT</h3>
+            <div class="line"><hr></div>
+            <div class="inputBox">
+              <P>Date de l'événement*</P>
+                <input type="text" placeholder="DD/MM/YYYY">
+            </div>
+            <div class="inputBox">
+              <P>Lieu de l'événement*</P>
+                <input type="texte" placeholder="-choisir-">
+            </div>
+            <div class="inputBox">
+              <P>Type d'événement*</P>
+                <input type="texte" placeholder="-choisir-">
+            </div>
+            <div class="inputBox">
+              <P>Ville*</P>
+                <input type="#" placeholder="">
+            </div>
+            <div class="inputBox5">
+              <P>Nombre de pêrsonne participantes*</P>
+                <input type="#" placeholder="">
+            </div>
+            <div class="inputBox6">
+                <input type="submit" value="Suivant">
+            </div>   
+
+          </div>
+       </div>
     </div>
+<!-- footer -->
+      <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Accueille</a></li>
+                    <li><a href="">Evénémnts</a></li>
+                    <li><a href="">Vous-êtes</a></li>
+                    <li><a href="">Animation</a></li>
+                    <li><a href="">Se connecter</a></li>
+                </ul>
+            </div>            
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2025; Dedigned by <span class="designer">Hassan</span></p>
+        </div>
     <script src="../javascript/script.js"></script>
   </body>
 </html>
